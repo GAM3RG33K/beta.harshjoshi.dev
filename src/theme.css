@@ -1,0 +1,79 @@
+/* Agent Terminal — custom Skeleton theme (dark only) */
+[data-theme="agent-terminal"] {
+	--spacing: 0.25rem;
+	--text-scaling: 1.067;
+
+	--typo-base--font-family: Inter, -apple-system, sans-serif;
+	--typo-base--color-light: var(--color-surface-950);
+	--typo-base--color-dark: var(--color-surface-50);
+
+	--typo-heading--font-family: Inter, -apple-system, sans-serif;
+	--typo-heading--font-weight: 800;
+	--typo-heading--letter-spacing: -0.03em;
+	--typo-heading--color-light: inherit;
+	--typo-heading--color-dark: inherit;
+
+	--typo-anchor--color-light: var(--color-primary-500);
+	--typo-anchor--color-dark: var(--color-primary-500);
+	--typo-anchor--text-decoration-line: none;
+	--typo-anchor--hover--text-decoration-line: underline;
+
+	--radius-base: 0.5rem;
+	--radius-container: 0.75rem;
+	--default-border-width: 1px;
+
+	--color-root-bg-light: var(--color-surface-50);
+	--color-root-bg-dark: var(--color-surface-950);
+
+	/* Primary = Agent green */
+	--color-primary-50: oklch(97% 0.04 162deg);
+	--color-primary-100: oklch(93% 0.08 162deg);
+	--color-primary-200: oklch(88% 0.12 162deg);
+	--color-primary-300: oklch(84% 0.16 162deg);
+	--color-primary-400: oklch(80% 0.18 162deg);
+	--color-primary-500: oklch(76% 0.18 162deg);
+	--color-primary-600: oklch(68% 0.16 162deg);
+	--color-primary-700: oklch(60% 0.14 162deg);
+	--color-primary-800: oklch(52% 0.12 162deg);
+	--color-primary-900: oklch(44% 0.1 162deg);
+	--color-primary-950: oklch(30% 0.07 162deg);
+
+	/* Secondary = secondary text blue-grey */
+	--color-secondary-50: oklch(85% 0.02 250deg);
+	--color-secondary-100: oklch(78% 0.02 250deg);
+	--color-secondary-200: oklch(70% 0.02 250deg);
+	--color-secondary-300: oklch(64% 0.02 250deg);
+	--color-secondary-400: oklch(58% 0.02 250deg);
+	--color-secondary-500: oklch(52% 0.02 250deg);
+	--color-secondary-600: oklch(46% 0.02 250deg);
+	--color-secondary-700: oklch(40% 0.02 250deg);
+	--color-secondary-800: oklch(32% 0.02 250deg);
+	--color-secondary-900: oklch(26% 0.02 250deg);
+	--color-secondary-950: oklch(18% 0.015 250deg);
+
+	/* Tertiary = amber accent */
+	--color-tertiary-50: oklch(96% 0.05 80deg);
+	--color-tertiary-100: oklch(92% 0.08 80deg);
+	--color-tertiary-200: oklch(88% 0.11 80deg);
+	--color-tertiary-300: oklch(84% 0.13 80deg);
+	--color-tertiary-400: oklch(80% 0.14 80deg);
+	--color-tertiary-500: oklch(76% 0.14 80deg);
+	--color-tertiary-600: oklch(68% 0.13 80deg);
+	--color-tertiary-700: oklch(60% 0.12 80deg);
+	--color-tertiary-800: oklch(52% 0.1 80deg);
+	--color-tertiary-900: oklch(42% 0.08 80deg);
+	--color-tertiary-950: oklch(28% 0.05 80deg);
+
+	/* Surface = near-black layers */
+	--color-surface-50: oklch(93% 0 0deg);
+	--color-surface-100: oklch(88% 0 0deg);
+	--color-surface-200: oklch(78% 0 0deg);
+	--color-surface-300: oklch(66% 0 0deg);
+	--color-surface-400: oklch(56% 0 0deg);
+	--color-surface-500: oklch(45% 0 0deg);
+	--color-surface-600: oklch(38% 0.005 250deg);
+	--color-surface-700: oklch(33% 0.01 250deg);
+	--color-surface-800: oklch(27% 0.013 250deg);
+	--color-surface-900: oklch(20% 0.013 250deg);
+	--color-surface-950: oklch(14% 0.013 250deg);
+}

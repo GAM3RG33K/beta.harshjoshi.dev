@@ -1,1 +1,81 @@
 @import 'tailwindcss';
+@import '@skeletonlabs/skeleton';
+@import '../theme.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html, body {
+	background: #0B0E14;
+	color: #E8E6E3;
+}
+
+::selection {
+	background: #00E59B;
+	color: #06231A;
+}
+
+.dot-grid {
+	background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.045) 1px, transparent 0);
+	background-size: 34px 34px;
+}
+
+/* Respect reduced motion globally */
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ── Shared components ─────────────────────────────── */
+.btn-primary {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 14px;
+	padding: 13px 26px;
+	border-radius: 10px;
+	background: #00E59B;
+	color: #06231A;
+	font-weight: 700;
+	text-decoration: none;
+	inline-size: fit-content;
+	display: inline-flex;
+	gap: 8px;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 32px rgba(0, 229, 155, 0.25);
+}
+.btn-ghost {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 13px;
+	padding: 13px 22px;
+	border-radius: 10px;
+	border: 1px solid #1E2735;
+	background: #10161F;
+	color: #E8E6E3;
+	text-decoration: none;
+	display: inline-flex;
+	gap: 8px;
+	transition: border-color 0.2s, color 0.2s;
+}
+.btn-ghost:hover {
+	border-color: #00E59B;
+	color: #00E59B;
+}
+.card {
+	background: #10161F;
+	border: 1px solid #1E2735;
+	border-radius: 14px;
+	transition: border-color 0.25s, transform 0.25s, background 0.25s;
+}
+.card-hover:hover {
+	border-color: rgba(0, 229, 155, 0.4);
+	transform: translateY(-4px);
+	background: #141C29;
+}
+.mono { font-family: 'JetBrains Mono', monospace; }
+.section-label {
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 12px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: #00E59B;
+}
