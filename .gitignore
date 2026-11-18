@@ -1,0 +1,39 @@
+# Allowlist: only app source and standard OSS files are tracked.
+# Harness, planning and tooling dirs are gitignored.
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+
+# Build output
+build/
+.svelte-kit/
+dist/
+static/resume.json
+static/assets/
+out/
+
+# Tooling / local
+.vercel
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+coverage/
+test-results/
+blob-report/
+playwright-report/
+
+# Personal docs / harness (gitignored — D-003)
+docs/
+.harness/
+site/
+design/
+brainstorm/
+*.local/
+
+# Editor
+.vscode/
+.idea/
