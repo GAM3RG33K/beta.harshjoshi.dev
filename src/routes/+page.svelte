@@ -23,7 +23,7 @@
 				<span class="pulse-dot"></span> AVAILABLE · BENGALURU · REMOTE FRIENDLY
 			</div>
 			<h1 class="text-[4.6rem] leading-[0.95] font-extrabold tracking-[-0.045em] md:text-[6.4rem]">
-				HARSH<br /><span class="outline-line">VARDHAN</span><br />JOSHI
+				HARSHVARDHAN<br /><span class="outline-line">JOSHI</span>
 			</h1>
 			<p class="mt-6 max-w-[48ch] text-[16px] leading-relaxed text-[#8A93A6]">
 				<strong class="text-[#E8E6E3]">AI Platform Engineer | AI Infrastructure &amp; Tooling.</strong><br />
@@ -52,7 +52,9 @@
 				<div><span class="text-[#00E59B]">✓</span> agent-ready <span class="text-[#8A93A6]">— tatva · memed · solo · pixel-press</span></div>
 				<div class="text-[#8A93A6]">&nbsp;</div>
 				<div><span class="text-[#00E59B]">$</span> npx mcp list</div>
-				<div class="text-[#8A93A6]">reactive-resume <span class="text-[#00E59B]">connected</span> · 157 tools</div>
+				<div class="text-[#8A93A6]">figma <span class="text-[#00E59B]">connected</span> · design-to-code</div>
+				<div class="text-[#8A93A6]">clickhouse <span class="text-[#00E59B]">connected</span> · analytics</div>
+				<div class="text-[#8A93A6]">github <span class="text-[#00E59B]">connected</span> · repos</div>
 				<div class="text-[#8A93A6]">mcp-harshjoshi-work <span class="text-[#00E59B]">connected</span> · 5 tools · 6/6 evals</div>
 				<div class="text-[#8A93A6]">&nbsp;</div>
 				<div><span class="text-[#00E59B]">$</span> <span class="cursor">▍</span></div>
@@ -76,8 +78,8 @@
 	<section id="work" class="mx-auto max-w-[1180px] px-8 pt-16">
 		<div class="mb-10 flex flex-wrap items-end justify-between gap-6">
 			<div>
-				<p class="section-label">01 / Work</p>
-				<h2 class="mt-2 text-4xl font-bold tracking-tight">Shipped at scale</h2>
+				<p class="section-label">01 / My Projects</p>
+				<h2 class="mt-2 text-4xl font-bold tracking-tight">Shipped by me</h2>
 			</div>
 			<p class="max-w-[34ch] text-right text-[13px] leading-snug text-[#8A93A6]">Consumer apps built first-commit to store — with real download counts, not vanity metrics.</p>
 		</div>
@@ -132,7 +134,7 @@
 					<span class="absolute top-1.5 -left-[5px] h-2 w-2 rounded-full border-2 border-[#00E59B] bg-[#0B0E14]"></span>
 					<div class="flex flex-wrap items-baseline justify-between gap-4">
 						<div class="text-[15px] font-bold">
-							{exp.position} — <span class="text-[#00E59B]">{exp.company}</span>
+							{exp.position} — {#if exp.url}<a href={exp.url} target="_blank" rel="noopener" class="text-[#00E59B] underline decoration-[#00E59B]/30 underline-offset-2 hover:decoration-[#00E59B]">{exp.company}</a>{:else}<span class="text-[#00E59B]">{exp.company}</span>{/if}
 						</div>
 						<div class="font-mono text-[11px] text-[#8A93A6]">{exp.date} · {exp.location}</div>
 					</div>
