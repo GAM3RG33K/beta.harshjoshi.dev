@@ -12,6 +12,17 @@ export const loadResume = async () => {
 		return data;
 	}
 
-	const local = readFileSync('static/resume.json', 'utf-8');
-	return JSON.parse(local);
+	const REMOTE_DEFAULT =
+		'https://raw.githubusercontent.com/GAM3RG33K/resume-json/refs/heads/main/resume.json';
+	const fallback = process.env.RESUME_URL || REMOTE_DEFAULT;
+
+	try {
+		const res = await fetch(fallback);
+		if (!res.ok) throw new Error(`remote resume fetch failed: ${res.status}`);
+		return await res.json();
+	} catch {
+		// Offline / bundled fallback: local dev only (CI has no static/resume.json — gitignored).
+		const local = readFileSync('static/resume.json', 'utf-8');
+		return JSON.parse(local);
+	}
 };
