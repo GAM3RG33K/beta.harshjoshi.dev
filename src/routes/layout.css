@@ -87,3 +87,8 @@ html, body {
 	text-transform: uppercase;
 	color: #00E59B;
 }
+
+/* Safety net against accidental horizontal overflow */
+html, body {
+	overflow-x: clip;
+}

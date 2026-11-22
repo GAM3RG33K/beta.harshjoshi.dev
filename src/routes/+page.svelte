@@ -17,12 +17,12 @@
 
 <main>
 	<!-- ── HERO ─────────────────────────────────────── -->
-	<section class="mx-auto grid max-w-[1180px] gap-14 px-8 pt-16 pb-14 md:grid-cols-[1.05fr_0.95fr] md:items-center md:pt-20">
-		<div>
+	<section class="mx-auto grid max-w-[1180px] gap-14 px-8 pt-16 pb-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center lg:pt-20">
+		<div class="@container min-w-0">
 			<div class="mb-5 flex items-center gap-2.5 font-mono text-[12px] text-[#00E59B]">
 				<span class="pulse-dot"></span> AVAILABLE · BENGALURU · REMOTE FRIENDLY
 			</div>
-			<h1 class="text-[clamp(3rem,11vw,6.4rem)] leading-[0.95] font-extrabold tracking-[-0.045em]">
+			<h1 class="hero-h1 leading-[0.95] font-extrabold tracking-[-0.045em]">
 				HARSHVARDHAN<br /><span class="outline-line">JOSHI</span>
 			</h1>
 			<p class="mt-6 max-w-[48ch] text-[16px] leading-relaxed text-[#8A93A6]">
@@ -37,7 +37,7 @@
 			</div>
 		</div>
 
-		<div class="term" aria-hidden="true">
+		<div class="term min-w-0" aria-hidden="true">
 			<div class="term-bar">
 				<span class="dot bg-[#FF5F57]"></span>
 				<span class="dot bg-[#FEBC2E]"></span>
@@ -166,6 +166,14 @@
 </main>
 
 <style>
+	.hero-h1 {
+		font-size: clamp(2.6rem, 9vw, 6.4rem);
+	}
+	@supports (font-size: 1cqw) {
+		.hero-h1 {
+			font-size: clamp(2.6rem, 11.4cqw, 6.4rem);
+		}
+	}
 	.pulse-dot {
 		width: 8px;
 		height: 8px;

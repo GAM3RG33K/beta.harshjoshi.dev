@@ -11,10 +11,10 @@
 	class="sticky top-0 z-50 border-b border-white/5 bg-[#0B0E14]/80 backdrop-blur-md"
 	aria-label="Primary"
 >
-	<div class="mx-auto flex h-[62px] max-w-[1180px] items-center justify-between px-8">
+	<div class="mx-auto flex h-[62px] max-w-[1180px] items-center justify-between gap-3 px-4 sm:px-8">
 		<a
 			href="/"
-			class="font-mono text-[15px] font-bold tracking-[0.06em] text-[#E8E6E3] no-underline"
+			class="shrink-0 font-mono text-[12px] font-bold tracking-[0.06em] min-[400px]:text-[15px] text-[#E8E6E3] no-underline"
 		>
 			HARSHVARDHAN<span class="text-[#00E59B]">_JOSHI</span>
 		</a>
@@ -25,7 +25,7 @@
 		</ul>
 		<a
 			href="mailto:contact@harshjoshi.dev"
-			class="rounded-lg border border-[#00E59B] px-4 py-2 font-mono text-[12px] text-[#00E59B] no-underline transition-all hover:bg-[#00E59B] hover:text-[#06231A]"
+			class="hidden shrink-0 rounded-lg border border-[#00E59B] px-4 py-2 font-mono text-[12px] min-[480px]:inline-flex text-[#00E59B] no-underline transition-all hover:bg-[#00E59B] hover:text-[#06231A]"
 		>
 			contact@harshjoshi.dev
 		</a>
