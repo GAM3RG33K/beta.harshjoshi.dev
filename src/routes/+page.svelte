@@ -7,10 +7,10 @@
 	const apps = $derived(resume.apps);
 	const projects = $derived(resume.projects);
 	const stats = [
-		{ n: '9+', l: 'years shipping\nfull-stack products' },
-		{ n: '350k+', l: 'downloads across\nshipped apps' },
-		{ n: '87.5%', l: 'mobile build time cut\nvia CI/CD at Signzy' },
-		{ n: '5', l: 'person pod led\nfintech KYC platform' }
+		{ n: '9+', l: 'years shipping\nfull-stack products', href: '#experience' },
+		{ n: '350k+', l: 'downloads across\nshipped apps', href: '#work' },
+		{ n: '87.5%', l: 'mobile build time cut\nvia CI/CD at Signzy', href: '#experience' },
+		{ n: '5', l: 'person pod led\nfintech KYC platform', href: '#experience' }
 	];
 	const isFeatured = (name: string) => name === 'Custom AI Harness + Harness Generator';
 </script>
@@ -22,7 +22,7 @@
 			<div class="mb-5 flex items-center gap-2.5 font-mono text-[12px] text-[#00E59B]">
 				<span class="pulse-dot"></span> AVAILABLE · BENGALURU · REMOTE FRIENDLY
 			</div>
-			<h1 class="text-[4.6rem] leading-[0.95] font-extrabold tracking-[-0.045em] md:text-[6.4rem]">
+			<h1 class="text-[clamp(3rem,11vw,6.4rem)] leading-[0.95] font-extrabold tracking-[-0.045em]">
 				HARSHVARDHAN<br /><span class="outline-line">JOSHI</span>
 			</h1>
 			<p class="mt-6 max-w-[48ch] text-[16px] leading-relaxed text-[#8A93A6]">
@@ -66,10 +66,10 @@
 	<div class="border-y border-white/5 bg-[#10161F]/45">
 		<div class="mx-auto grid max-w-[1180px] grid-cols-2 md:grid-cols-4">
 			{#each stats as s}
-				<div class="border-l border-white/5 px-6 py-6 first:border-l-0">
+				<a href={s.href} aria-label="{s.n} — {s.l.replace(/\n/g, ' ')}" class="border-l border-white/5 px-6 py-6 no-underline transition-colors first:border-l-0 hover:bg-white/[0.02]">
 					<div class="font-mono text-[30px] font-bold tracking-tight text-[#00E59B]">{s.n}</div>
 					<div class="mt-1 whitespace-pre-line text-[12px] leading-snug text-[#8A93A6]">{s.l}</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</div>

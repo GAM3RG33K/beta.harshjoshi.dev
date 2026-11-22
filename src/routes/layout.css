@@ -14,6 +14,12 @@ html, body {
 	color: #06231A;
 }
 
+:focus-visible {
+	outline: 2px solid #00E59B;
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
 .dot-grid {
 	background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.045) 1px, transparent 0);
 	background-size: 34px 34px;
@@ -40,8 +46,10 @@ html, body {
 	transition: transform 0.2s, box-shadow 0.2s;
 }
 .btn-primary:hover {
-	transform: translateY(-2px);
 	box-shadow: 0 12px 32px rgba(0, 229, 155, 0.25);
+}
+.btn-primary:active {
+	transform: scale(0.98);
 }
 .btn-ghost {
 	font-family: 'JetBrains Mono', monospace;
