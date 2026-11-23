@@ -17,7 +17,7 @@
 	<div class="mt-6 flex flex-wrap items-end justify-between gap-6">
 		<div class="flex min-w-0 items-center gap-4">
 			{#if browser && app.image}
-				<img src={`assets/${app.image }`} alt="" class="h-16 w-16 shrink-0 rounded-2xl border border-white/10 object-cover md:h-20 md:w-20" />
+				<img src={`https://raw.githubusercontent.com/GAM3RG33K/resume-json/refs/heads/main/assets/${app.image}`} alt="" class="h-16 w-16 shrink-0 rounded-2xl border border-white/10 object-cover md:h-20 md:w-20" />
 			{/if}
 			<div class="min-w-0">
 				<p class="section-label">{app.status ?? 'App'}</p>
