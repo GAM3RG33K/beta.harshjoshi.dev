@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
+	import { browser } from '$app/environment';
 
 	let { data }: PageProps = $props();
 	const resume = $derived(data.resume);
@@ -88,8 +89,8 @@
 				<a href="/apps/{app.slug}" class="card card-hover flex flex-col gap-2.5 p-5 no-underline text-inherit">
 					<div class="flex items-center justify-between gap-2">
 						<div class="flex min-w-0 items-center gap-2.5">
-							{#if app.image}
-								<img src={`assets/${app.image }`} alt="" class="h-8 w-8 shrink-0 rounded-lg border border-white/10 object-cover" />
+							{#if browser && app.image}
+								<img src={`assets/${app.image}`} alt="" class="h-8 w-8 shrink-0 rounded-lg border border-white/10 object-cover" />
 							{/if}
 							<span class="truncate text-[15px] font-bold leading-tight">{app.name}</span>
 						</div>

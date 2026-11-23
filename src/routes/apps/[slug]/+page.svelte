@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
+	import { browser } from '$app/environment';
 
 	let { data }: PageProps = $props();
 	const app = $derived(data.app);
@@ -15,7 +16,7 @@
 
 	<div class="mt-6 flex flex-wrap items-end justify-between gap-6">
 		<div class="flex min-w-0 items-center gap-4">
-			{#if app.image}
+			{#if browser && app.image}
 				<img src={`assets/${app.image }`} alt="" class="h-16 w-16 shrink-0 rounded-2xl border border-white/10 object-cover md:h-20 md:w-20" />
 			{/if}
 			<div class="min-w-0">
