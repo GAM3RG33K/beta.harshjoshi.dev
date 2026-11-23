@@ -89,7 +89,7 @@
 					<div class="flex items-center justify-between gap-2">
 						<div class="flex min-w-0 items-center gap-2.5">
 							{#if app.image}
-								<img src={`assets/${app.image}`} alt="" class="h-8 w-8 shrink-0 rounded-lg border border-white/10 object-cover" />
+								<img src={`assets/${app.image }`} alt="" class="h-8 w-8 shrink-0 rounded-lg border border-white/10 object-cover" />
 							{/if}
 							<span class="truncate text-[15px] font-bold leading-tight">{app.name}</span>
 						</div>
