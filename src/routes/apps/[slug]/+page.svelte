@@ -11,13 +11,17 @@
 </svelte:head>
 
 <article class="mx-auto max-w-[900px] px-8 pt-14 pb-20">
-	<a href="/#work" class="mono text-[12px] uppercase tracking-[0.14em] text-[#8A93A6] no-underline hover:text-[#00E59B]">← Work</a>
+	<a href="/#work" class="mono text-[12px] uppercase tracking-[0.14em] text-[#8A93A6] no-underline hover:text-[#00E59B]">← My Projects</a>
 
 	<div class="mt-6 flex flex-wrap items-end justify-between gap-6">
-		<div>
-			<p class="section-label">{app.status ?? 'App'}</p>
-			<h1 class="mt-2 text-5xl font-extrabold tracking-[-0.03em]">{app.name}</h1>
-			<p class="mt-3 max-w-[60ch] text-[17px] leading-snug text-[#8A93A6]">{app.tagline}</p>
+		<div class="flex min-w-0 items-center gap-4">
+			{#if app.image}
+				<img src={`assets/${app.image}`} alt="" class="h-16 w-16 shrink-0 rounded-2xl border border-white/10 object-cover md:h-20 md:w-20" />
+			{/if}
+			<div class="min-w-0">
+				<p class="section-label">{app.status ?? 'App'}</p>
+				<h1 class="mt-2 text-4xl font-extrabold tracking-[-0.03em] md:text-5xl">{app.name}</h1>
+			</div>
 		</div>
 		{#if app.downloads}
 			<div class="rounded-xl border border-[#00E59B]/25 bg-[#00E59B]/10 px-5 py-3 text-right">
@@ -26,6 +30,8 @@
 			</div>
 		{/if}
 	</div>
+
+	<p class="mt-4 max-w-[62ch] text-[17px] leading-snug text-[#8A93A6]">{app.tagline}</p>
 
 	{#if app.platforms?.length}
 		<div class="mt-5 flex flex-wrap gap-2.5">

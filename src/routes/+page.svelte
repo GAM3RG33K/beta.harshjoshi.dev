@@ -87,7 +87,12 @@
 			{#each apps as app (app.slug)}
 				<a href="/apps/{app.slug}" class="card card-hover flex flex-col gap-2.5 p-5 no-underline text-inherit">
 					<div class="flex items-center justify-between gap-2">
-						<span class="text-[15px] font-bold leading-tight">{app.name}</span>
+						<div class="flex min-w-0 items-center gap-2.5">
+							{#if app.image}
+								<img src={`assets/${app.image}`} alt="" class="h-8 w-8 shrink-0 rounded-lg border border-white/10 object-cover" />
+							{/if}
+							<span class="truncate text-[15px] font-bold leading-tight">{app.name}</span>
+						</div>
 						{#if app.downloads}
 							<span class="rounded-md bg-[#00E59B]/10 px-2 py-0.5 font-mono text-[11px] text-[#00E59B]">{app.downloads}</span>
 						{/if}
